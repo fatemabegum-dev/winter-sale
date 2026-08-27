@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  padding: 20px 20px;
+}
+
+/* Hero Section */
+.banner {
+  width: 100%;
+  height: 400px; /* আপনার প্রয়োজন অনুযায়ী হাইট পরিবর্তন করতে পারেন */
+  background-image: url('img/banner.jpg'); /* এখানে আপনার ইমেজের লিংক বা পাথ দিন */
+  background-size: cover; /* ইমেজ পুরো ব্যানার জুড়ে ফিট হবে */
+  background-position: center; /* ইমেজ মাঝামাঝি থাকবে */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center; /* কন্টেন্ট নিখুঁতভাবে লম্বালম্বি মাঝে রাখবে */
+  align-items: center;
+  padding-left:0;/* লেখা বাম দিক থেকে সরানোর জন্য */
+}
+
+.banner-content {
+  color: #fff;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap:3px;
+  
+}
+
+
+.subtitle::after{
+  content: '';
+  height:2px;
+  width: 50px;
+  background-color: #fe6905;
+  border-radius: 2px;
+}
+
+.banner-content h1 {
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.banner-content h1 span {
+  color: #fe6905; /* 20% off লেখাটির রং পরিবর্তন করতে */
+}
+
+.promo-box span{
+  font-size: 18px;
+  
+}
+
+
+.promo-box button {
+  background-color: transparent;
+  border:1px solid #fff;
+  color: #fff;
+  margin-top: 25px;
+  padding: 10px 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  
+
+
+  display: flex;
+  justify-content: center; /* কন্টেন্ট নিখুঁতভাবে লম্বালম্বি মাঝে রাখবে */
+  align-items: center;
+  transition: 2s ;
+  
+}
+
+button:hover{
+  background-color: #fe6905;
+  border:1px solid #fe6905;
+}
+
+
+
+/* products section */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin: 25px 0 15px 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image Box - Full Fill Solution */
+.img-box {
+  background-color: #f1f3f5;
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ইমেজ ব্যাকগ্রাউন্ডের সমান হয়ে ফিট করবে */
+}
+
+/* Dynamic Star Rating Styling */
+.rating {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.star-filled {
+  color: #fe6905; /* ভরা স্টারের রঙ (কমলা/হলুদ) */
+}
+
+.star-empty {
+  color: #ccc; /* খালি স্টারের রঙ (ধূসর) */
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: #888;
+  font-weight: 500;
+}
+
+/* Sidebar Styling */
+.cart-summary-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 65px;
+}
+
+.sidebar-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.coupon-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.coupon-input {
+  display: flex;
+  gap: 8px;
+}
+
+.coupon-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Fixed Jump Issue on Button Hover */
+.cart-summary-section .btn-apply, .cart-summary-section .btn-purchase {
+  background-color: #1e4d58;
+  color: #fff;
+   
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+   
+}
+
+.cart-summary-section .btn-apply {
+  padding: 10px 16px;
+  transition: 2s;
+}
+
+.cart-summary-section .btn-apply:hover{
+  background: #fe6905;
+}
+
+.cart-summary-section .btn-purchase {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: 2s;
+}
+
+.cart-summary-section .btn-purchase:hover{
+  background: #fe6905;
+}
+
+
+
+
+.price-box p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.price-box span {
+  color: #777;
+}
+
+.price-box .final-total {
+  margin-top: 15px;
+}
+
+
+
+
+/* Items-box */
+.cart-items-box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.cart-list {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.cart-list li {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.cart-list li span.qty-count {
+  float: right;
+  font-weight: 600;
+}
+
+
+
+.product-card{
+  cursor: pointer;
+  background-color:(#fff);
+  transition:background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.product-card:hover{
+  background-color: rgba(237, 255, 254, 0.94);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+
+
+
+
+/* ==========================================
+   MOBILE RESPONSIVE COMPLETE FIX
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+  /* 1. Global Reset & Container */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .container {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    margin: 0 auto !important;
+  }
+
+  /* 2. Banner Section Centered & Clean */
+  .banner-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 220px !important;
+    padding: 25px 15px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .banner-content {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .banner-content h1 {
+    font-size: 1.3rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 15px !important;
+    word-break: break-word;
+  }
+
+  .banner-content button, 
+  .banner-content .order-now-btn {
+    margin: 0 auto !important;
+    display: inline-block !important;
+  }
+
+  /* 3. Section Titles */
+  .section-title {
+    text-align: center !important;
+    font-size: 1.5rem !important;
+    margin: 20px 0 15px 0 !important;
+  }
+
+  /* 4. Product Grid (Single Column) */
+  .products-section {
+    width: 100% !important;
+  }
+
+  .product-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  /* 5. Product Cards */
+  .product-card {
+    width: 100% !important;
+    max-width: 340px !important; /* মোবাইলে কার্ড সুন্দর সাইজে ফিক্স থাকবে */
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .img-box {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  .img-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* 6. Cart Summary Section */
+  .cart-summary-section {
+    width: 100% !important;
+    margin-top: 25px !important;
+  }
+  
+
+  /* Coupon Input Container Clean Fix */
+ .coupon-input {
+    display: flex !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 6px !important;
+  }
+
+  .coupon-input input {
+    flex: 1 !important; /* ইনপুট বাকি থাকা সব জায়গা নেবে */
+    min-width: 0 !important; /* ইনপুট যাতে বাটনকে ঠেলে বাইরে না পাঠায় */
+    padding: 10px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    box-sizing: border-box !important;
+  }
+
+ .btn-apply {
+    flex-shrink: 0 !important; /* বাটন কখনো চেপে বা বের হয়ে যাবে না */
+    padding: 10px 14px !important;
+    white-space: nowrap !important; /* টেক্সট ভেঙে নিচে যাবে না */
+    box-sizing: border-box !important;
+  } 
